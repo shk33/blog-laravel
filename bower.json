@@ -1,0 +1,27 @@
+{
+  "name": "LaraBlog",
+  "version": "0.0.5",
+  "authors": [
+    "Miguel Coronel <m.coronel.seg@gmail.com>"
+  ],
+  "description": "A learning app from Laravle 5.1 beauty",
+  "main": "index.js",
+  "keywords": [
+    "laravel",
+    "5.1",
+    "php"
+  ],
+  "license": "MIT",
+  "homepage": "yet",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor/bower_dl",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
+  }
+}
