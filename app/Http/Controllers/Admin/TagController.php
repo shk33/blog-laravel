@@ -86,7 +86,14 @@ class TagController extends Controller
    */
   public function edit($id)
   {
-      //
+    $tag = Tag::findOrFail($id);
+    $data = ['id' => $id];
+
+    foreach (array_keys($this->fields) as $field) {
+      $data[$field] = old($field, $tag->$field);
+    }
+    
+    return view('admin.tag.edit', $data); 
   }
 
   /**
