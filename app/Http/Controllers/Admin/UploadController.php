@@ -96,8 +96,13 @@ class UploadController extends Controller
   public function uploadFile(UploadFileRequest $request)
   {
     $file = $_FILES['file'];
+    $mime_type = explode("/", $_FILES['file']['type'])[1];
     $fileName = $request->get('file_name');
-    $fileName = $fileName ?: $file['name'];
+    if ($fileName) {
+      $fileName = $fileName.".".$mime_type;
+    } else {
+      $fileName = $file['name'];
+    }
     $path = str_finish($request->get('folder'), '/') . $fileName;
     $content = File::get($file['tmp_name']);
 
