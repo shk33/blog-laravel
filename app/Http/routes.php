@@ -26,9 +26,18 @@ $router->group([
   'namespace' => 'Admin',
   'middleware' => 'auth',
 ], function () {
+  // Posts
   resource('admin/post', 'PostController');
+  // Tags
   resource('admin/tag', 'TagController', ['except' => 'show']);
+  // Uploads
   get('admin/upload', 'UploadController@index');
+  // Uploads Files
+  post('admin/upload/file', 'UploadController@uploadFile');
+  delete('admin/upload/file', 'UploadController@deleteFile');
+  // Uploas folders
+  post('admin/upload/folder', 'UploadController@createFolder');
+  delete('admin/upload/folder', 'UploadController@deleteFolder');
 });
 
 // Logging in and out
