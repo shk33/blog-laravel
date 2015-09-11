@@ -1,5 +1,5 @@
 /public/uploads/*
-!/public//uploads/.gitkeep
+!/public/uploads/.gitkeep
 /vendor
 /node_modules
 Homestead.yaml
