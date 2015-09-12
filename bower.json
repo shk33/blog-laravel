@@ -25,6 +25,8 @@
     "datatables": "~1.10.9",
     "datatables-plugins": "~1.10.9",
     "font-awesome": "fontawesome#~4.4.0",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "pickadate": "~3.5.6",
+    "selectize": "~0.12.1"
   }
 }
