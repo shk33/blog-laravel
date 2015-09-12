@@ -5,6 +5,7 @@ namespace App\Jobs;
 use App\Post;
 use App\Tag;
 use App\Jobs\Job;
+use Carbon\Carbon;
 use Illuminate\Contracts\Bus\SelfHandling;
 
 class PostFormFields extends Job implements SelfHandling

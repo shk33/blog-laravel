@@ -27,7 +27,7 @@ $router->group([
   'middleware' => 'auth',
 ], function () {
   // Posts
-  resource('admin/post', 'PostController');
+  resource('admin/post', 'PostController' , ['except' => 'show']);
   // Tags
   resource('admin/tag', 'TagController', ['except' => 'show']);
   // Uploads
