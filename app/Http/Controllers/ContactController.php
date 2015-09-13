@@ -30,7 +30,7 @@ class ContactController extends Controller
     $data = $request->only('name', 'email', 'phone');
     $data['messageLines'] = explode("\n", $request->get('message'));
 
-    Mail::send('emails.contact', $data, function ($message) use ($data) {
+    Mail::queue('emails.contact', $data, function ($message) use ($data) {
       $message->subject('Blog Contact Form: '.$data['name'])
         ->to(config('blog.contact_email'))
         ->replyTo($data['email']);
