@@ -74,11 +74,16 @@ elixir(function(mix) {
     'js/bootstrap.js',
     'js/jquery.dataTables.js',
     'js/dataTables.bootstrap.js'
-  ],
-  'public/assets/js/admin.js',
-  'resources/assets'
-  );
+  ], 'public/assets/js/admin.js', 'resources/assets');
+
+  // Combine blog scripts
+  mix.scripts([
+    'js/jquery.js',
+    'js/bootstrap.js',
+    'js/blog.js'
+  ], 'public/assets/js/blog.js', 'resources//assets');
 
   // Compile Less
   mix.less('admin.less', 'public/assets/css/admin.css');
+  mix.less('blog.less', 'public/assets/css/blog.css');
 });
