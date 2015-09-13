@@ -6,6 +6,7 @@ return [
   'description' => 'This is my meta description',
   'author'      => 'Miguel Coronel',
   'page_image'  => 'home-bg.jpg',
+  'contact_email' => 'm.coronel.seg@gmail.com',
   'posts_per_page' => 10,
   'uploads' => [
     'storage' => 'local',
