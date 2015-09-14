@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Jobs\BlogIndexData;
 use App\Services\RssFeed;
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use App\Services\SiteMap;
 use App\Post;
 use App\Tag;
 use Carbon\Carbon;
@@ -39,5 +40,12 @@ class BlogController extends Controller
     
     return response($rss)
       ->header('Content-type', 'application/rss+xml');
+  }
+
+  public function siteMap(SiteMap $siteMap)
+  {
+    $map = $siteMap->getSiteMap();
+    return response($map)
+      ->header('Content-type', 'text/xml');
   }
 }

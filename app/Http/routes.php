@@ -25,6 +25,9 @@ Route::post('contact', 'ContactController@sendContactInfo');
 // RSS 
 Route::get('rss', 'BlogController@rss');
 
+// SiteMap
+Route::get('sitemap.xml', 'BlogController@siteMap');
+
 // Admin area
 get('admin', function () {
   return redirect('/admin/post');
