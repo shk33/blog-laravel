@@ -22,6 +22,9 @@ Route::get('blog/{slug}', 'BlogController@showPost');
 Route::get('contact', 'ContactController@showForm');
 Route::post('contact', 'ContactController@sendContactInfo');
 
+// RSS 
+Route::get('rss', 'BlogController@rss');
+
 // Admin area
 get('admin', function () {
   return redirect('/admin/post');
