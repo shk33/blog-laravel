@@ -4,7 +4,7 @@
   "authors": [
     "Miguel Coronel <m.coronel.seg@gmail.com>"
   ],
-  "description": "A learning app from Laravle 5.1 beauty",
+  "description": "A learning app from Laravel 5.1 beauty",
   "main": "index.js",
   "keywords": [
     "laravel",
